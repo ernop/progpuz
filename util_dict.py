@@ -5,14 +5,12 @@ def sub(a,b):
    return (a[0]-b[0],a[1]-b[1])
 
 def ULzero(shape):
-   #print 'ulzero'
    #move upper left square to zero
    minx=min([sq[0] for sq in shape.keys()])
    miny=min([sq[1] for sq in shape.keys()])
    return {(k[0]-minx,k[1]-miny):v for k,v in shape.items()}
   
 def rot(shape):
-   #print 'rot'
    #rot x==>y,  y==>-x
    #return set([(sq[1],-1*sq[0]) for sq in shape])
    return {(k[1],-1*k[0]):v for k,v in shape.items()}
@@ -32,7 +30,6 @@ def fliprots(shape,preserve_hw=False):
    res=[]
    if preserve_hw:
       orig_hw=get_hw(shape)
-   #print 'fliprots'
    for nn in range(2):
       for mm in range(4):
          res.append(shape)
@@ -69,7 +66,7 @@ def translate(shape, coord):
    return {(sq[0]+coord[0],sq[1]+coord[1]):v for sq,v in shape.items()}
 
 def isempty(sq,shape):
-   return sq not in shape
+   return shape[sq]==0
 
 #all additions of T+L:
 def all_combinations(bigger,smaller):
@@ -96,7 +93,6 @@ def all_combinations(bigger,smaller):
 
 def get_canonicals(shapes,preserve_hw=False):
    '''preserve the same hxw profile or not?'''
-   print 'getcans'
    res=[]
    for sh in shapes:
       can=get_canonical(sh,preserve_hw=preserve_hw)
@@ -186,9 +182,3 @@ def combine_many(many,shape):
    canonical=get_canonicals(res)
    canonical.sort(key=lambda x:canonical_value(x))
    return canonical
-
-#canonical=get_single_combination(a,b)
-#for ii,shape in enumerate(canonical):
-    #print ii
-    #show(shape)
-

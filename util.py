@@ -28,10 +28,10 @@ def fliprots(shape):
    '''all unique (over translation, flipping, rotation) versions of a shape'''
    res=[]
    for nn in range(2):
-       for mm in range(4):
-           res.append(shape)
-           shape=rot(shape)
-       shape=flip(shape)
+      for mm in range(4):
+         res.append(shape)
+         shape=rot(shape)
+      shape=flip(shape)
    res2=[]
    for rr in res:
       rr=ULzero(rr)
