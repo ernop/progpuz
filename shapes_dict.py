@@ -7,6 +7,7 @@ DICT_PENTOS={}
 ii=97
 for k,v in PENTOS.items():
     DICT_PENTOS[k]=set2dict(v, k.lower())
+    DICT_PENTOS[k]=set2dict(v, chr(ii))
     ii+=1
 
 PENTOS=DICT_PENTOS

@@ -83,10 +83,10 @@ def all_combinations(bigger,smaller):
                   #this is L, translated so that the filled square of L overlaps the empty, "neighbor" square of sq
                   combo=test_add(news2,fr)
                   if combo:
-                      combo=ULzero(combo)
-                      possibles.append(combo)
+                     combo=ULzero(combo)
+                     possibles.append(combo)
                   else:
-                      continue
+                     continue
    p2=[]
    for pos in possibles:
       if pos in p2:
@@ -162,13 +162,15 @@ def show(shape,mxx=0,myy=0):
    maxx=max(mxx-1,max([sq[0] for sq in shape]))
    maxy=max(myy-1,max([sq[1] for sq in shape]))
    for yy in range(maxy+1):
+      line=''
       for xx in range(maxx+1):
+         
          sq=(xx,yy)
          if sq in shape:
-            print shape[sq],
+            line+=str(shape[sq])
          else:
-            print '-',
-      print '\n',
+            line+='-'
+      print line
    print '='*30
 
 def combine(a,b):
