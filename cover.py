@@ -36,10 +36,12 @@ def test_neighbor_placement(board, adder, remaining_shapes):
                     if not res:
                         return False
     return True
+              
+GLOBAL_NODES=0              
                          
 def get_covers(board,shapes,depth=0,use_global=False,use_fullboard_identical=False,subquery=False,spot=None):
     ''''''
-    global GLOBAL_BAD
+    global GLOBAL_BAD,GLOBAL_NODES
     allres=[]
     #pick one spot to cover
     if spot:
@@ -64,7 +66,10 @@ def get_covers(board,shapes,depth=0,use_global=False,use_fullboard_identical=Fal
                 adder=translate(fr,sub(spot,sq))
                 newboard=board_add(board,adder)
                 #does it fit in the current board, without going out of bounds?
+                
                 if newboard:
+                    if not subquery:
+                        GLOBAL_NODES+=1
                     if use_global:
                         tester=tuple(sorted(adder.keys()))
                         if tester in GLOBAL_BAD:
@@ -93,16 +98,23 @@ def get_covers(board,shapes,depth=0,use_global=False,use_fullboard_identical=Fal
                     #adding this was ok.  go deeper.
                     
                     if not subquery:
+                        #if random.random()<0.05:
+                            #import ipdb;ipdb.set_trace()
                         if not test_neighbor_placement(newboard, adder, remaining_shapes):
+                            #print 'prune',
+                            #show(newboard)
+                            #for rp in remaining_shapes:
+                                #show(rp)
                             board_sub(newboard, adder)
-                            print 'prune',
                             continue
-                        else:
-                            print 'unprune'
-                            
+                        #else:
+                            #print 'unprune'
+                            #show(newboard)
+                            #for rp in remaining_shapes:
+                                #show(rp)
                         
                     
-                    if random.random()<0.005:
+                    if random.random()<0.0001:
                         show(newboard)
                     if subquery:
                         #any piece was available to place there.
@@ -114,7 +126,8 @@ def get_covers(board,shapes,depth=0,use_global=False,use_fullboard_identical=Fal
                     #only need to subtract if we added since board_add does nothing if fails.
                     board_sub(board,adder)
     
-    #if not subquery:print '*'*depth,len(allres),len(GLOBAL_BAD)
+    if GLOBAL_NODES%1000==0:
+        if not subquery:print '*'*depth,len(allres),len(GLOBAL_BAD),GLOBAL_NODES
     return allres
 
 def board_add(board,adder):
@@ -166,6 +179,8 @@ if 1:
 shapes=PENTOS.values()
 HEIGHT=4
 WIDTH=15
+HEIGHT=3
+WIDTH=20
 board=simple_board(WIDTH,HEIGHT)
 
 st=time.clock()
