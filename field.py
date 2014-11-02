@@ -15,7 +15,7 @@ def output_html(board,override_name=None):
         fn=override_name
     else:
         fn=get_fn(board)
-    if not os.path.isdir("field-out"):
+    if not os.path.isdir("field-output"):
         os.mkdir('field-output')
     fp='field-output/%s.html'%fn
     out=open(fp,'w')
@@ -165,6 +165,8 @@ def do(board,pieces,must_overlap,depth,first_overlaps=None):
                         new_overlaps=get_bordering_empty(adder, board)
                         if depth==0:
                             first_overlaps=set(new_overlaps[:])
+                        #should check if minim dist from first_overlaps to new_overlaps is greater than the best case 
+                        #distance back home - cause that would mean fields are not possible here.
                         newres=do(board,remaining_pieces,new_overlaps,depth=depth+1,first_overlaps=first_overlaps)
                         myres.extend([nn for nn in newres if nn not in myres])
                         if len(myres)>MAXRES:
@@ -184,11 +186,11 @@ def do(board,pieces,must_overlap,depth,first_overlaps=None):
                                 #proof: making a field out of a giant box with 100 squares, and two small I pieces.  The field won't necessarily border the first/last piece
                                 #so you have to check them all.
                                 totalfield=get_totalfield(board)
+                                print totalfield,MAX_FIELD
                                 if totalfield:
-                                    if totalfield>=MAX_FIELD/3:
-                                        print 'got one',len(myres),depth,totalfield
-                                        myres.append(cc)
-                                        output_html(board,override_name='got one %d field=%d'%(len(myres),totalfield))
+                                    print 'got one',len(myres),depth,totalfield
+                                    myres.append(cc)
+                                    output_html(board,override_name='got one %d field=%d'%(len(myres),totalfield))
                                 else:
                                     pass
                     board_sub(board,adder)
@@ -214,8 +216,7 @@ def do(board,pieces,must_overlap,depth,first_overlaps=None):
     return myres
                     
 
-seven=[DICT_PENTOS['L'].copy(),
-        DICT_PENTOS['I'].copy(),
+six=[DICT_PENTOS['L'].copy(),
         DICT_PENTOS['X'].copy(),
         DICT_PENTOS['P'].copy(),
         DICT_PENTOS['Y'].copy(),
@@ -246,7 +247,7 @@ pieces=easy
 pieces=mid
 pieces=IS
 pieces=five
-pieces=seven
+pieces=six
 
 #should fix this so same type pieces have the same number.
 seen_counts={}
