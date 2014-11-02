@@ -1,0 +1,14 @@
+#!wing
+#!version=5.0
+##################################################################
+# Wing IDE project file                                          #
+##################################################################
+[project attributes]
+proj.file-list = [loc('cover.py'),
+                  loc('field.py'),
+                  loc('main.py'),
+                  loc('shapes.py'),
+                  loc('shapes_dict.py'),
+                  loc('util.py'),
+                  loc('util_dict.py')]
+proj.file-type = 'shared'

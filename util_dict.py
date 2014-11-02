@@ -52,14 +52,22 @@ def test_add(aa,bb):
    '''see if they overlap'''
    res={}
    for shape in (aa,bb,):
-       for sq in shape:
+      for sq in shape:
          if sq in res:
             return False
          res[sq]=shape[sq]
    return res
 
+
+def named_neighbors(s):
+   return [('left',(s[0]-1,s[1])),('right',(s[0]+1,s[1])),('down',(s[0],s[1]+1)),('up',(s[0],s[1]-1))]
+
 def neighbors(s):
-   return ((s[0]-1,s[1]),(s[0]+1,s[1]),(s[0],s[1]+1),(s[0],s[1]-1))
+   return [(s[0]-1,s[1]),(s[0]+1,s[1]),(s[0],s[1]+1),(s[0],s[1]-1)]
+
+def moreneighbors(s):
+   return [(s[0]-1,s[1]),(s[0]+1,s[1]),(s[0],s[1]+1),(s[0],s[1]-1),(s[0]-1,s[1]-1),(s[0]+1,s[1]-1),(s[0]-1,s[1]+1),(s[0]+1,s[1]+1)]
+   
 
 def translate(shape, coord):
    if coord==(0,0):return shape.copy()
@@ -182,3 +190,20 @@ def combine_many(many,shape):
    canonical=get_canonicals(res)
    canonical.sort(key=lambda x:canonical_value(x))
    return canonical
+
+
+def board_add(board,adder):
+    for sq in adder:
+        if sq not in board or board[sq]!=0:
+            return False
+    for sq in adder:
+        board[sq]=adder[sq]
+    return board
+
+def board_sub(board,adder):
+    for sq in adder:
+        if sq not in board:
+            continue
+        if board[sq]!=adder[sq]:
+            import ipdb;ipdb.set_trace()
+        board[sq]=0        

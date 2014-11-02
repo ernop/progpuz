@@ -3,6 +3,14 @@ import random,time
 from shapes_dict import *
 
 def pick_spot(board):
+    for n in range(WIDTH+HEIGHT):
+        for div in range(n+1):
+            guy=(n-div,div)
+            if guy in board and board[guy]==0:
+                return guy
+    return False
+                
+def pick_spot_old(board):
     for xx in range(WIDTH):
         for yy in range(HEIGHT):
             if board[(xx,yy)]==0:
@@ -26,7 +34,7 @@ def test_neighbor_placement(board, adder, remaining_shapes):
     '''for every open neighbor of adder, does one of the remaining shapes even fit to cover it?'''
     done=[]
     for sq in adder:
-        for nei in neighbors(sq):
+        for nei in moreneighbors(sq):
             if nei not in board:continue
             if nei not in done:
                 done.append(nei)
@@ -48,17 +56,18 @@ def get_covers(board,shapes,depth=0,use_global=False,use_fullboard_identical=Fal
         pass
     else:
         spot=pick_spot(board)
-        if not spot:
+        if spot is False:
             print '!'*30
-            #import ipdb;ipdb.set_trace()
+            import ipdb;ipdb.set_trace()
             show(board)
             bb=board.copy()
             return [bb,]
-    lastshape=None
+    doneshapes=set()
     for ii,shape in enumerate(shapes):
-        if shape==lastshape:
+        tester=tuple(sorted([k for k in shape]))
+        if tester in doneshapes:
             continue
-        lastshape=None
+        doneshapes.add(tester)
         remaining_shapes=shapes[:]
         remaining_shapes.remove(shape)
         for jj,fr in enumerate(fliprots(shape)):
@@ -66,7 +75,6 @@ def get_covers(board,shapes,depth=0,use_global=False,use_fullboard_identical=Fal
                 adder=translate(fr,sub(spot,sq))
                 newboard=board_add(board,adder)
                 #does it fit in the current board, without going out of bounds?
-                
                 if newboard:
                     if not subquery:
                         GLOBAL_NODES+=1
@@ -130,22 +138,7 @@ def get_covers(board,shapes,depth=0,use_global=False,use_fullboard_identical=Fal
         if not subquery:print '*'*depth,len(allres),len(GLOBAL_BAD),GLOBAL_NODES
     return allres
 
-def board_add(board,adder):
-    for sq in adder:
-        if sq not in board or board[sq]!=0:
-            return False
-    for sq in adder:
-        board[sq]=adder[sq]
-    return board
 
-def board_sub(board,adder):
-    for sq in adder:
-        if sq not in board:
-            continue
-        if board[sq]!=adder[sq]:
-            import ipdb;ipdb.set_trace()
-            
-        board[sq]=0        
 
 def simple_board(width,height):
     board={}
@@ -159,28 +152,39 @@ def name_shape(shape,ii):
         shape[k]=chr(ii)
     return shape
 
-WIDTH=10
-HEIGHT=9
+WIDTH=40
+HEIGHT=24
 
 shapes=PENTOS.values()
 if 1:
     shapes=[]
-    for n in range(6):
-        shapes.append(name_shape(L.copy(),n+97-32))
-    for n in range(6):
-        shapes.append(name_shape(N.copy(),n+97-32+8))
-    for n in range(6):
-        shapes.append(name_shape(V.copy(),n+97-32+10))
+    #for n in range(8):
+        #shapes.append(name_shape(U.copy(),n+97-32))
+    #for n in range(8):
+        #shapes.append(name_shape(T.copy(),n+97-32+8))
     #for n in range(4):
-        #shapes.append(name_shape(V.copy(),n+97-32+15))
-    
+        #shapes.append(name_shape(L.copy(),n+97-32+16))
+    #for n in range(4):
+        #shapes.append(name_shape(P.copy(),n+97-32+24))
+    for n in range(16):
+        shapes.extend(PENTOS.values())
+    #shapes.extend(PENTOS.values())
+    #shapes.extend(PENTOS.values())
+    #shapes.extend(PENTOS.values())
+    #shapes.extend(PENTOS.values())
+    #shapes.extend(PENTOS.values())
+    #shapes.extend(PENTOS.values())
+    #shapes.extend(PENTOS.values())
+    random.seed(100)
+    random.shuffle(shapes)
+    #shapes.sort()
 #shapes=[I]*45
 #shapes=PENTOS
-shapes=PENTOS.values()
-HEIGHT=4
-WIDTH=15
-HEIGHT=3
-WIDTH=20
+#shapes=PENTOS.values()
+#HEIGHT=4
+#WIDTH=15
+#HEIGHT=20
+#WIDTH=3
 board=simple_board(WIDTH,HEIGHT)
 
 st=time.clock()
