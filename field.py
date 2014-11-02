@@ -1,4 +1,4 @@
-import random,datetime
+import random,datetime,os
 random.seed(1001)
 
 from util_dict import *
@@ -7,23 +7,7 @@ from shapes_dict import *
 
 #make a field out of a set of pieces
 
-PIECES=DICT_PENTOS.copy()
-
 TIME_FORMAT='%Y-%m-%d-%A-%H%M%S' # '2012-09-20-Tuesday-1816'
-
-def is_field(board):
-    res={'is_field':True}
-    res['area']=4
-    return res
-
-colors=zip(range(12),'red yellow pink orange blue green purple lightblue lightgreen '.split())
-
-def output_png(board):
-    ''''''
-    fn=get_fn(board)
-    #x
-
-HTMLHEADER=open('html/field-header.html','r').read()
 
 def output_html(board,override_name=None):
     '''board as a table.'''
@@ -31,9 +15,12 @@ def output_html(board,override_name=None):
         fn=override_name
     else:
         fn=get_fn(board)
+    if not os.path.isdir("field-out"):
+        os.mkdir('field-output')
     fp='field-output/%s.html'%fn
     out=open(fp,'w')
     lines=[]
+    HTMLHEADER=open('html/field-header.html','r').read()
     lines.append(HTMLHEADER)
     htmlout={}
     #import hashlib
@@ -62,7 +49,6 @@ def output_html(board,override_name=None):
     miny=min([x[1] for x in htmlout.keys()])
     maxy=max([x[1] for x in htmlout.keys()])
     lines.append('<table cellpadding=0 cellspacing=0 class="pento-table>"')
-    
     for yy in range(miny,maxy+1):
         lines.append('<tr>')
         for xx in range(minx,maxx+1):
@@ -78,11 +64,7 @@ def get_fn(board):
         name=board['name']
     else:
         name='no name'
-    res=is_field(board)
-    if res['is_field']:
-        area=res['area']
-    else:
-        area='unfinished'
+    area=''
     pieces='5'
     fn='%s_%s_%s_%s'%(name,dt,pieces,area)
     return fn
@@ -105,9 +87,6 @@ def copy_remove(pieces,piece):
         if set(pp.items())==set(piece.items()):
             remaining_pieces.remove(pp)
             break
-    if len(pieces)!=len(remaining_pieces)+1:
-        import ipdb;ipdb.set_trace()
-    
     return remaining_pieces
 
 def get_bordering_empty(adder,board):
@@ -121,7 +100,6 @@ def get_bordering_empty(adder,board):
 
 def count(board):
     return len([v for v in board.values() if v])
-
 
 def floodfill(board,start,killers=None):
     if not killers:
@@ -141,9 +119,7 @@ def floodfill(board,start,killers=None):
         todo.update(neighbors(nei))
         done.add(nei)
         if len(done)>MAX_FIELD:
-            #print 'out max',MAX_FIELD
             return False,done
-                        
     return True,done
 
 def get_all_neighbors(board):
@@ -171,12 +147,10 @@ def get_totalfield(board):
 
 def do(board,pieces,must_overlap,depth,first_overlaps=None):
     '''first piece placement only do once...
-    
-    after the first placement, track first overlaps so that you can skip cases where the last piece placed doesn't overlap first overlaps.
+    after the first placement, track first overlaps so that you can 
+    skip cases where the last piece placed doesn't overlap first overlaps.
     '''
     myres=[]
-    if depth==0 and 0:
-        import ipdb;ipdb.set_trace()
     for spot in must_overlap:
         for piece in pieces:
             remaining_pieces=copy_remove(pieces,piece)
@@ -201,9 +175,6 @@ def do(board,pieces,must_overlap,depth,first_overlaps=None):
                             pass
                             #(fall through and board_sub)
                         else:
-                            
-                            
-                            
                             cc=board.copy()
                             if cc in myres:
                                 pass
@@ -213,16 +184,13 @@ def do(board,pieces,must_overlap,depth,first_overlaps=None):
                                 #proof: making a field out of a giant box with 100 squares, and two small I pieces.  The field won't necessarily border the first/last piece
                                 #so you have to check them all.
                                 totalfield=get_totalfield(board)
-                                
                                 if totalfield:
-                                    myres.append(cc)
-                                    print 'got one',len(myres),depth
-                                    #output_html(board,override_name='got one %d field=%d'%(len(myres),totalfield))
+                                    if totalfield>=MAX_FIELD/3:
+                                        print 'got one',len(myres),depth,totalfield
+                                        myres.append(cc)
+                                        output_html(board,override_name='got one %d field=%d'%(len(myres),totalfield))
                                 else:
                                     pass
-                                    #output_html(board,override_name='no field %d field=%d'%(len(myres),0))
-                            
-                    #print 'sub'
                     board_sub(board,adder)
                     if depth==0:
                         break
@@ -246,7 +214,13 @@ def do(board,pieces,must_overlap,depth,first_overlaps=None):
     return myres
                     
 
-                    
+seven=[DICT_PENTOS['L'].copy(),
+        DICT_PENTOS['I'].copy(),
+        DICT_PENTOS['X'].copy(),
+        DICT_PENTOS['P'].copy(),
+        DICT_PENTOS['Y'].copy(),
+        DICT_PENTOS['V'].copy(),
+        DICT_PENTOS['T'].copy()]                 
                     
 five=[DICT_PENTOS['L'].copy(),
         DICT_PENTOS['I'].copy(),
@@ -268,11 +242,11 @@ mid=[DICT_PENTOS['L'].copy(),
         DICT_PENTOS['I'].copy(),
         ]
 
-
 pieces=easy
 pieces=mid
 pieces=IS
 pieces=five
+pieces=seven
 
 #should fix this so same type pieces have the same number.
 seen_counts={}
@@ -294,8 +268,8 @@ MAX_FIELD=((5*len(pieces)-2)/4)**2
 #so when doing floodfill, stop after that many
 
 board={}
-for xx in range(-20,20):
-    for yy in range(-20,20):
+for xx in range(-15,15):
+    for yy in range(-15,15):
         board[(xx,yy)]=0
 res=do(board,pieces,[(0,0)],depth=0)
 bestsofar=0
