@@ -1,0 +1,1 @@
+123	2.602	one_level=0	skip_predetermined=1	use_illegal_4=1	prune=1	better_prune=1	bump_prune=1	check_hints=1	SH=0.1	LO=0.1

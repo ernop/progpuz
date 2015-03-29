@@ -9,15 +9,33 @@ def ULzero(shape):
    minx=min([sq[0] for sq in shape.keys()])
    miny=min([sq[1] for sq in shape.keys()])
    return {(k[0]-minx,k[1]-miny):v for k,v in shape.items()}
-  
+
 def rot(shape):
-   #rot x==>y,  y==>-x
-   #return set([(sq[1],-1*sq[0]) for sq in shape])
+   #rot effects: x==>y,  y==>-x
    return {(k[1],-1*k[0]):v for k,v in shape.items()}
 
 def flip(shape):
+   #flip over the  y axis
    return {(-1*k[0],k[1]):v for k,v in shape.items()}
    #return set([(-1*sq[0],sq[1]) for sq in shape])
+
+def translate(shape, coord):
+   if coord==(0,0):return shape.copy()
+   return {(sq[0]+coord[0],sq[1]+coord[1]):v for sq,v in shape.items()}
+
+def isempty(sq,shape):
+   return shape[sq]==0
+
+def named_neighbors(s):
+   return [('left',(s[0]-1,s[1])),('right',(s[0]+1,s[1])),('down',(s[0],s[1]+1)),('up',(s[0],s[1]-1))]
+
+def neighbors(s):
+   return [(s[0]-1,s[1]),(s[0]+1,s[1]),(s[0],s[1]+1),(s[0],s[1]-1)]
+
+def moreneighbors(s):
+   return [(s[0]-1,s[1]),(s[0]+1,s[1]),(s[0],s[1]+1),(s[0],s[1]-1),(s[0]-1,s[1]-1),(s[0]+1,s[1]-1),(s[0]-1,s[1]+1),(s[0]+1,s[1]+1)]
+
+
 
 FLIPROTS={}
 
@@ -45,7 +63,7 @@ def fliprots(shape,preserve_hw=False):
             continue
       res2.append(rr)
    FLIPROTS[ss]=res2
-   
+
    return res2
 
 def test_add(aa,bb):
@@ -57,24 +75,6 @@ def test_add(aa,bb):
             return False
          res[sq]=shape[sq]
    return res
-
-
-def named_neighbors(s):
-   return [('left',(s[0]-1,s[1])),('right',(s[0]+1,s[1])),('down',(s[0],s[1]+1)),('up',(s[0],s[1]-1))]
-
-def neighbors(s):
-   return [(s[0]-1,s[1]),(s[0]+1,s[1]),(s[0],s[1]+1),(s[0],s[1]-1)]
-
-def moreneighbors(s):
-   return [(s[0]-1,s[1]),(s[0]+1,s[1]),(s[0],s[1]+1),(s[0],s[1]-1),(s[0]-1,s[1]-1),(s[0]+1,s[1]-1),(s[0]-1,s[1]+1),(s[0]+1,s[1]+1)]
-   
-
-def translate(shape, coord):
-   if coord==(0,0):return shape.copy()
-   return {(sq[0]+coord[0],sq[1]+coord[1]):v for sq,v in shape.items()}
-
-def isempty(sq,shape):
-   return shape[sq]==0
 
 #all additions of T+L:
 def all_combinations(bigger,smaller):
@@ -135,6 +135,7 @@ def canonical_value(shape):
    return val
 
 def canonical_value2(shape):
+   #
    shape2=ULzero(shape)
    val=0
    ii=0
@@ -168,7 +169,7 @@ def show(shape,mxx=0,myy=0):
    for yy in range(maxy+1):
       line=''
       for xx in range(maxx+1):
-         
+
          sq=(xx,yy)
          if sq in shape:
             line+=str(shape[sq])
@@ -191,7 +192,6 @@ def combine_many(many,shape):
    canonical.sort(key=lambda x:canonical_value(x))
    return canonical
 
-
 def board_add(board,adder):
     for sq in adder:
         if sq not in board or board[sq]!=0:
@@ -206,4 +206,4 @@ def board_sub(board,adder):
             continue
         if board[sq]!=adder[sq]:
             import ipdb;ipdb.set_trace()
-        board[sq]=0        
+        board[sq]=0

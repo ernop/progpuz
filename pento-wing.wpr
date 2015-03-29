@@ -6,6 +6,7 @@
 [project attributes]
 proj.file-list = [loc('cover.py'),
                   loc('field.py'),
+                  loc('html/field-header.html'),
                   loc('main.py'),
                   loc('shapes.py'),
                   loc('shapes_dict.py'),

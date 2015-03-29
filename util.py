@@ -15,7 +15,7 @@ def ULzero_dict(shape):
    minx=min([sq[0] for sq in shape.keys()])
    miny=min([sq[1] for sq in shape.keys()])
    return {(k[0]-minx,k[1]-miny):v for k,v in shape.items()}
-  
+
 
 def rot(shape):
    #rot x==>y,  y==>-x
@@ -145,3 +145,10 @@ def get_single_combination(a,b):
     #print ii
     #show(shape)
 
+
+
+def neighbors(s):
+   return [(s[0]-1,s[1]),(s[0]+1,s[1]),(s[0],s[1]+1),(s[0],s[1]-1)]
+
+def moreneighbors(s):
+   return [(s[0]-1,s[1]),(s[0]+1,s[1]),(s[0],s[1]+1),(s[0],s[1]-1),(s[0]-1,s[1]-1),(s[0]+1,s[1]-1),(s[0]-1,s[1]+1),(s[0]+1,s[1]+1)]

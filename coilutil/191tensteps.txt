@@ -1,0 +1,262 @@
+tensteps
+psyco full
+newcansee value: 0
+checking alleys
+checking split
+checking emit
+i am in level 191
+
+LEVEL: 191
+initial todo len is: 3040
+191 - 1/3040 32,54 val 2 	this:31.28	total:31.28	alley=9669	cds=1953	split=869	deadend=145	
+191 - 2/3040 53,53 val 1 	this: 0.37	total:31.64	deeptunnel=1	
+191 - 3/3040 40,22 val 1 	this: 1.40	total:33.04	alley=494	cds=49	split=26	deadend=5	
+191 - 4/3040 21,28 val 2 	this:29.72	total:62.76	alley=11740	cds=2552	split=958	deadend=203	
+191 - 5/3040 4,36 val 2 	this: 0.43	total:63.19	alley=11	split=10	cds=7	deadend=3	
+191 - 6/3040 43,3 val 1 	this: 1.85	total:65.04	cds=369	alley=275	split=42	deadend=3	
+191 - 7/3040 8,63 val 2 	this: 0.37	total:65.41	alley=2	split=1	cds=1	
+191 - 8/3040 7,25 val 2 	this: 0.45	total:65.85	alley=53	split=9	cds=5	deadend=4	
+191 - 9/3040 65,50 val 2 	this: 4.17	total:70.02	alley=1585	cds=164	split=116	deadend=11	
+191 - 10/3040 29,44 val 2 	this: 3.28	total:73.30	alley=1412	cds=121	split=76	deadend=12	
+191 - 11/3040 68,25 val 1 	this: 0.36	total:73.67	deeptunnel=1	
+191 - 12/3040 33,41 val 1 	this:40.52	total:114.19	alley=15188	cds=3255	split=1688	deadend=144	
+191 - 13/3040 36,34 val 1 	this: 0.36	total:114.55	deeptunnel=1	
+191 - 14/3040 1,64 val 1 	this: 9.19	total:123.75	alley=3297	cds=337	split=219	deadend=33	
+191 - 15/3040 58,19 val 1 	this: 0.37	total:124.12	deeptunnel=1	
+191 - 16/3040 41,57 val 2 	this:24.96	total:149.08	alley=7189	cds=3007	split=674	deadend=83	
+191 - 17/3040 61,38 val 2 	this:13.19	total:162.27	alley=4638	cds=766	split=481	deadend=44	
+191 - 18/3040 48,37 val 2 	this:19.08	total:181.35	alley=7202	cds=2028	split=674	deadend=78	
+191 - 19/3040 11,66 val 2 	this:112.17	total:293.52	alley=32893	cds=8241	split=4158	deadend=349	
+191 - 20/3040 34,8 val 2 	this:14.56	total:308.08	alley=4804	cds=862	split=493	deadend=42	
+191 - 21/3040 37,13 val 2 	this: 6.68	total:314.76	alley=1661	cds=1138	split=167	deadend=16	
+191 - 22/3040 24,14 val 2 	this: 3.47	total:318.23	alley=1423	cds=138	split=103	deadend=7	
+191 - 23/3040 62,31 val 2 	this: 6.21	total:324.45	alley=2660	cds=265	split=172	deadend=14	
+191 - 24/3040 45,61 val 2 	this: 3.59	total:328.04	alley=1257	cds=141	split=104	deadend=9	
+191 - 25/3040 66,66 val 1 	this: 5.02	total:333.06	alley=1515	cds=579	split=147	deadend=10	
+191 - 26/3040 13,20 val 2 	this: 0.39	total:333.45	alley=21	cds=5	split=4	deadend=1	
+191 - 27/3040 46,64 val 2 	this:26.98	total:360.44	alley=7902	cds=2535	split=1128	deadend=66	
+191 - 28/3040 52,17 val 2 	this: 0.54	total:360.98	alley=138	cds=26	split=5	deadend=2	
+191 - 29/3040 3,2 val 2 	this: 0.51	total:361.49	alley=66	cds=19	split=6	
+191 - 30/3040 25,49 val 2 	this:26.66	total:388.15	alley=9679	cds=1243	split=592	deadend=111	
+191 - 31/3040 64,20 val 2 	this: 1.38	total:389.53	alley=465	cds=42	split=21	deadend=4	
+191 - 32/3040 28,10 val 1 	this:16.33	total:405.85	alley=5562	cds=935	split=532	deadend=47	
+191 - 33/3040 50,27 val 2 	this:33.74	total:439.59	alley=13486	cds=2541	split=1193	deadend=87	
+191 - 34/3040 31,15 val 2 	this: 3.54	total:443.13	alley=1003	cds=418	split=79	deadend=7	
+191 - 35/3040 53,62 val 2 	this:28.38	total:471.51	alley=9123	cds=2233	split=1036	deadend=71	
+191 - 36/3040 1,40 val 1 	this: 0.52	total:472.03	alley=4	split=1	cds=1	
+191 - 37/3040 40,29 val 2 	this:28.07	total:500.10	alley=10179	cds=2828	split=1064	deadend=75	
+191 - 38/3040 4,35 val 2 	this: 0.43	total:500.53	alley=20	split=11	deadend=3	cds=3	
+191 - 39/3040 8,38 val 1 	this: 0.40	total:500.93	alley=13	split=5	deadend=2	cds=1	
+191 - 40/3040 46,23 val 1 	this: 0.36	total:501.30	deeptunnel=1	
+191 - 41/3040 29,37 val 2 	this: 0.83	total:502.13	alley=210	cds=69	split=14	deadend=7	
+191 - 42/3040 36,41 val 2 	this:57.93	total:560.06	alley=21646	cds=4769	split=2210	deadend=213	
+191 - 43/3040 41,34 val 2 	this:18.90	total:578.96	alley=7354	cds=1480	split=779	deadend=58	
+191 - 44/3040 22,12 val 2 	this: 1.99	total:580.95	alley=766	cds=77	split=59	deadend=3	
+191 - 45/3040 61,63 val 1 	this:23.97	total:604.92	alley=7601	cds=1654	split=886	deadend=60	
+191 - 46/3040 44,25 val 1 	this: 0.36	total:605.28	deeptunnel=1	
+191 - 47/3040 9,9 val 2 	this: 2.22	total:607.50	alley=816	cds=75	split=68	deadend=2	
+191 - 48/3040 12,50 val 2 	this:141.53	total:749.03	alley=39134	cds=11010	split=4872	deadend=407	
+191 - 49/3040 17,57 val 2 	this:114.22	total:863.25	alley=32745	cds=8242	split=4169	deadend=349	
+191 - 50/3040 37,54 val 2 	this:11.92	total:875.17	alley=4569	cds=479	split=274	deadend=50	
+191 - 51/3040 59,9 val 2 	this:14.57	total:889.74	alley=5203	cds=871	split=434	deadend=38	
+191 - 52/3040 24,21 val 1 	this: 1.97	total:891.71	alley=553	cds=53	split=28	deadend=3	
+191 - 53/3040 45,54 val 1 	this:43.34	total:935.05	alley=15448	cds=3523	split=1456	deadend=228	
+191 - 54/3040 67,65 val 1 	this: 0.36	total:935.41	deeptunnel=1	
+191 - 55/3040 13,13 val 2 	this: 3.68	total:939.10	alley=1557	cds=156	split=122	deadend=6	
+191 - 56/3040 52,24 val 2 	this:32.19	total:971.29	alley=11373	cds=1996	split=1108	deadend=84	
+191 - 57/3040 25,58 val 1 	this:18.38	total:989.68	alley=4612	cds=2695	split=495	deadend=67	
+191 - 58/3040 53,7 val 1 	this: 1.68	total:991.36	alley=376	cds=317	split=39	deadend=3	
+191 - 59/3040 1,33 val 1 	this: 0.36	total:991.72	deeptunnel=1	
+191 - 60/3040 4,42 val 2 	this: 0.43	total:992.15	alley=31	split=10	cds=5	deadend=2	
+191 - 61/3040 8,45 val 2 	this: 6.79	total:998.93	cds=1620	alley=932	split=176	deadend=28	
+191 - 62/3040 7,15 val 2 	this: 2.94	total:1001.87	alley=1098	cds=109	split=71	deadend=4	
+191 - 63/3040 65,12 val 1 	this: 1.41	total:1003.28	alley=458	cds=40	split=24	deadend=2	
+191 - 64/3040 46,30 val 2 	this:23.85	total:1027.13	alley=8710	cds=2083	split=920	deadend=60	
+191 - 65/3040 29,62 val 1 	this: 9.36	total:1036.49	alley=3288	cds=336	split=221	deadend=33	
+191 - 66/3040 68,15 val 2 	this:14.57	total:1051.06	alley=5350	cds=850	split=449	deadend=42	
+191 - 67/3040 16,29 val 1 	this: 0.36	total:1051.42	deeptunnel=1	
+191 - 68/3040 54,46 val 2 	this: 2.57	total:1054.00	alley=1070	cds=119	split=76	deadend=4	
+191 - 69/3040 2,64 val 2 	this: 9.21	total:1063.21	alley=3297	cds=337	split=219	deadend=33	
+191 - 70/3040 58,37 val 2 	this:31.40	total:1094.60	alley=11833	cds=1799	split=1104	deadend=100	
+191 - 71/3040 22,7 val 2 	this: 4.17	total:1098.77	alley=1798	cds=190	split=126	deadend=13	
+191 - 72/3040 5,53 val 2 	this: 0.38	total:1099.15	alley=10	split=2	deadend=1	cds=1	
+191 - 73/3040 61,56 val 2 	this: 3.47	total:1102.61	alley=886	cds=515	split=102	deadend=7	
+191 - 74/3040 44,16 val 1 	this:13.68	total:1116.29	alley=5248	cds=1215	split=533	deadend=45	
+191 - 75/3040 9,50 val 2 	this:152.44	total:1268.73	alley=42299	cds=11333	split=5117	deadend=430	
+191 - 76/3040 66,37 val 1 	this: 4.07	total:1272.80	alley=1556	cds=157	split=97	deadend=8	
+191 - 77/3040 47,5 val 2 	this: 1.74	total:1274.54	alley=553	cds=52	split=28	deadend=2	
+191 - 78/3040 34,26 val 2 	this: 2.40	total:1276.93	alley=992	cds=85	split=62	deadend=8	
+191 - 79/3040 37,63 val 1 	this: 0.40	total:1277.34	alley=14	cds=8	split=5	deadend=2	
+191 - 80/3040 59,14 val 2 	this: 1.37	total:1278.71	alley=457	cds=44	split=20	deadend=2	
+191 - 81/3040 10,19 val 2 	this: 5.40	total:1284.11	alley=2147	cds=216	split=135	deadend=10	
+191 - 82/3040 49,52 val 2 	this: 0.37	total:1284.48	split=2	alley=2	cds=1	
+191 - 83/3040 13,6 val 1 	this: 0.37	total:1284.85	alley=7	split=2	cds=1	
+191 - 84/3040 45,64 val 2 	this:163.41	total:1448.26	alley=49816	cds=12965	split=6480	deadend=490	
+191 - 85/3040 40,66 val 1 	this: 1.17	total:1449.43	alley=386	cds=45	split=24	deadend=5	
+191 - 86/3040 50,13 val 2 	this: 1.83	total:1451.26	alley=475	cds=330	split=42	deadend=12	
+191 - 87/3040 40,11 val 1 	this: 0.36	total:1451.62	deeptunnel=1	
+191 - 88/3040 21,55 val 1 	this:27.56	total:1479.19	alley=7843	cds=3033	split=740	deadend=84	
+191 - 89/3040 4,17 val 2 	this: 0.44	total:1479.63	alley=40	split=10	cds=3	deadend=1	
+191 - 90/3040 26,34 val 2 	this: 6.10	total:1485.73	alley=2728	cds=239	split=162	deadend=32	
+191 - 91/3040 46,33 val 2 	this:18.52	total:1504.25	alley=7362	cds=1397	split=665	deadend=44	
+191 - 92/3040 29,55 val 2 	this: 1.75	total:1506.00	cds=390	alley=295	split=43	deadend=9	
+191 - 93/3040 16,20 val 2 	this: 0.62	total:1506.62	alley=186	cds=11	split=7	deadend=2	
+191 - 94/3040 54,33 val 1 	this: 3.31	total:1509.93	alley=1169	cds=305	split=98	deadend=7	
+191 - 95/3040 58,44 val 2 	this:14.47	total:1524.40	alley=5493	cds=850	split=512	deadend=40	
+191 - 96/3040 41,44 val 2 	this:46.38	total:1570.78	alley=17388	cds=3356	split=1834	deadend=157	
+191 - 97/3040 61,49 val 2 	this:12.66	total:1583.44	alley=4349	cds=750	split=519	deadend=36	
+191 - 98/3040 9,59 val 1 	this: 0.38	total:1583.82	alley=16	deadend=3	
+191 - 99/3040 66,60 val 2 	this: 0.41	total:1584.23	alley=30	cds=6	split=1	deadend=1	
+191 - 100/3040 12,32 val 2 	this:82.86	total:1667.10	alley=29209	cds=6287	split=3308	deadend=374	
+191 - 101/3040 34,21 val 2 	this: 0.38	total:1667.48	alley=18	cds=2	
+191 - 102/3040 37,56 val 1 	this: 9.28	total:1676.75	alley=3293	cds=337	split=217	deadend=32	
+191 - 103/3040 62,48 val 2 	this:22.70	total:1699.45	alley=7428	cds=1853	split=886	deadend=62	
+191 - 104/3040 45,40 val 1 	this: 1.76	total:1701.21	cds=414	alley=263	split=49	deadend=3	
+191 - 105/3040 49,45 val 2 	this:26.16	total:1727.38	alley=10340	cds=1774	split=898	deadend=95	
+191 - 106/3040 13,63 val 1 	this:10.41	total:1737.79	cds=2399	alley=1412	split=275	deadend=33	
+191 - 107/3040 63,19 val 1 	this: 3.64	total:1741.43	alley=1197	cds=411	split=74	deadend=9	
+191 - 108/3040 50,4 val 2 	this: 3.17	total:1744.60	alley=1125	cds=109	split=59	deadend=4	
+191 - 109/3040 53,9 val 1 	this: 4.30	total:1748.90	alley=1333	cds=465	split=90	deadend=13	
+191 - 110/3040 1,51 val 2 	this: 0.37	total:1749.27	split=2	alley=2	cds=1	
+191 - 111/3040 21,48 val 2 	this:25.71	total:1774.98	alley=9516	cds=876	split=618	deadend=98	
+191 - 112/3040 26,45 val 2 	this:26.57	total:1801.55	alley=10096	cds=916	split=581	deadend=115	
+191 - 113/3040 65,30 val 2 	this:12.65	total:1814.20	alley=4623	cds=724	split=436	deadend=35	
+191 - 114/3040 33,53 val 2 	this: 3.73	total:1817.93	alley=1510	cds=152	split=59	deadend=28	
+191 - 115/3040 54,56 val 2 	this: 0.37	total:1818.31	cds=6	alley=4	split=1	deadend=1	
+191 - 116/3040 19,6 val 2 	this: 0.41	total:1818.72	alley=47	split=3	cds=2	
+191 - 117/3040 5,39 val 2 	this: 0.45	total:1819.16	alley=22	split=11	cds=5	deadend=3	
+191 - 118/3040 44,6 val 1 	this: 0.37	total:1819.54	deeptunnel=1	
+191 - 119/3040 9,60 val 1 	this:18.94	total:1838.48	alley=6412	cds=670	split=455	deadend=58	
+191 - 120/3040 66,55 val 2 	this: 1.94	total:1840.42	alley=635	cds=65	split=46	deadend=3	
+191 - 121/3040 56,1 val 2 	this: 0.39	total:1840.81	alley=4	split=3	cds=2	
+191 - 122/3040 59,28 val 1 	this:13.07	total:1853.89	alley=4215	cds=741	split=421	deadend=40	
+191 - 123/3040 62,59 val 2 	this: 4.14	total:1858.03	alley=1249	cds=132	split=90	deadend=7	
+191 - 124/3040 45,33 val 2 	this:16.96	total:1874.99	alley=5248	cds=1369	split=558	deadend=36	
+191 - 125/3040 49,38 val 2 	this:30.86	total:1905.85	alley=10156	cds=2086	split=945	deadend=133	
+191 - 126/3040 13,56 val 2 	this:11.81	total:1917.66	alley=3200	cds=333	split=227	deadend=28	
+191 - 127/3040 35,23 val 1 	this:16.71	total:1934.37	alley=5298	cds=1014	split=549	deadend=76	
+191 - 128/3040 25,13 val 2 	this:15.76	total:1950.12	alley=5046	cds=860	split=517	deadend=40	
+191 - 129/3040 63,24 val 1 	this: 0.40	total:1950.52	deeptunnel=1	
+191 - 130/3040 14,41 val 2 	this: 6.60	total:1957.12	alley=2223	cds=199	split=139	deadend=27	
+191 - 131/3040 53,18 val 2 	this: 0.41	total:1957.53	alley=12	cds=4	split=2	
+191 - 132/3040 1,52 val 2 	this: 0.39	total:1957.92	split=2	alley=2	cds=1	
+191 - 133/3040 21,57 val 1 	this: 0.38	total:1958.30	alley=7	cds=2	split=1	deadend=1	
+191 - 134/3040 4,7 val 2 	this: 0.40	total:1958.71	alley=5	cds=1	
+191 - 135/3040 46,51 val 1 	this: 0.37	total:1959.08	deeptunnel=1	
+191 - 136/3040 29,9 val 2 	this:28.92	total:1988.00	alley=8033	cds=1539	split=896	deadend=75	
+191 - 137/3040 51,36 val 2 	this:16.99	total:2005.00	alley=5924	cds=963	split=569	deadend=28	
+191 - 138/3040 16,2 val 1 	this: 0.41	total:2005.41	alley=10	split=1	
+191 - 139/3040 54,51 val 1 	this: 0.43	total:2005.84	deeptunnel=1	
+191 - 140/3040 2,45 val 2 	this: 0.40	total:2006.24	alley=9	split=1	deadend=1	
+191 - 141/3040 58,62 val 2 	this: 4.73	total:2010.97	alley=1253	cds=134	split=92	deadend=8	
+191 - 142/3040 41,30 val 2 	this:28.22	total:2039.19	alley=9930	cds=1960	split=996	deadend=73	
+191 - 143/3040 5,32 val 2 	this: 0.44	total:2039.64	alley=34	split=14	cds=4	deadend=2	
+191 - 144/3040 47,16 val 1 	this: 1.73	total:2041.37	alley=358	cds=318	split=41	deadend=5	
+191 - 145/3040 34,39 val 2 	this:10.58	total:2051.95	alley=4408	cds=793	split=330	deadend=69	
+191 - 146/3040 17,37 val 1 	this: 0.38	total:2052.34	alley=10	cds=4	split=1	
+191 - 147/3040 56,8 val 2 	this: 2.91	total:2055.25	cds=628	alley=578	split=62	deadend=5	
+191 - 148/3040 37,42 val 2 	this:72.61	total:2127.85	alley=26046	cds=5273	split=2667	deadend=220	
+191 - 149/3040 59,21 val 1 	this:19.58	total:2147.43	alley=6742	cds=999	split=622	deadend=32	
+191 - 150/3040 42,39 val 1 	this: 1.98	total:2149.41	alley=729	cds=69	split=39	deadend=4	
+191 - 151/3040 23,11 val 1 	this: 2.06	total:2151.47	alley=730	cds=72	split=56	deadend=3	
+191 - 152/3040 62,34 val 2 	this:43.99	total:2195.47	alley=14179	cds=2502	split=1354	deadend=112	
+191 - 153/3040 67,53 val 1 	this:20.67	total:2216.13	alley=6666	cds=1120	split=776	deadend=54	
+191 - 154/3040 13,49 val 2 	this:19.84	total:2235.98	alley=6448	cds=668	split=455	deadend=56	
+191 - 155/3040 35,28 val 1 	this:13.51	total:2249.48	alley=5082	cds=750	split=563	deadend=39	
+191 - 156/3040 55,65 val 2 	this: 2.02	total:2251.50	alley=622	cds=69	split=52	deadend=5	
+191 - 157/3040 50,54 val 2 	this:16.60	total:2268.10	alley=5579	cds=880	split=623	deadend=41	
+191 - 158/3040 1,13 val 1 	this: 0.40	total:2268.50	alley=5	split=1	
+191 - 159/3040 39,24 val 1 	this: 3.30	total:2271.80	alley=945	cds=418	split=78	deadend=14	
+191 - 160/3040 26,63 val 2 	this:119.36	total:2391.17	alley=32903	cds=8240	split=4185	deadend=349	
+191 - 161/3040 46,58 val 2 	this: 5.36	total:2396.53	alley=1548	cds=611	split=120	deadend=23	
+191 - 162/3040 29,2 val 1 	this: 1.93	total:2398.46	cds=366	alley=263	split=39	deadend=4	
+191 - 163/3040 51,45 val 2 	this:23.19	total:2421.64	alley=8298	cds=1513	split=761	deadend=68	
+191 - 164/3040 2,36 val 2 	this: 0.46	total:2422.10	alley=16	split=11	cds=7	deadend=4	
+191 - 165/3040 58,57 val 2 	this: 2.06	total:2424.17	alley=642	cds=70	split=46	deadend=5	
+191 - 166/3040 41,7 val 2 	this: 1.86	total:2426.02	alley=552	cds=52	split=30	deadend=2	
+191 - 167/3040 9,46 val 2 	this:199.58	total:2625.61	alley=52403	cds=13578	split=6081	deadend=539	
+191 - 168/3040 17,30 val 1 	this: 0.37	total:2625.98	alley=2	split=1	
+191 - 169/3040 56,15 val 2 	this: 4.06	total:2630.04	alley=1645	cds=161	split=78	deadend=5	
+191 - 170/3040 59,42 val 2 	this:14.20	total:2644.24	alley=5180	cds=815	split=492	deadend=38	
+191 - 171/3040 62,37 val 2 	this: 1.94	total:2646.17	alley=700	cds=74	split=51	deadend=5	
+191 - 172/3040 45,19 val 1 	this: 4.24	total:2650.41	alley=2094	cds=294	split=150	deadend=29	
+191 - 173/3040 67,58 val 1 	this: 5.05	total:2655.46	alley=1511	cds=579	split=147	deadend=10	
+191 - 174/3040 13,42 val 1 	this: 0.37	total:2655.84	alley=4	split=2	
+191 - 175/3040 35,5 val 2 	this:29.60	total:2685.44	alley=9930	cds=1772	split=1000	deadend=88	
+191 - 176/3040 18,55 val 2 	this: 0.38	total:2685.82	alley=10	cds=2	split=1	
+191 - 177/3040 25,31 val 2 	this: 8.33	total:2694.15	alley=3586	cds=304	split=197	deadend=37	
+191 - 178/3040 63,14 val 2 	this: 2.57	total:2696.72	alley=674	cds=359	split=51	deadend=4	
+191 - 179/3040 11,28 val 2 	this: 0.42	total:2697.14	alley=32	split=4	deadend=4	cds=3	
+191 - 180/3040 14,59 val 2 	this: 9.67	total:2706.80	alley=3291	cds=339	split=222	deadend=34	
+191 - 181/3040 1,6 val 1 	this: 0.37	total:2707.17	deeptunnel=1	
+191 - 182/3040 39,17 val 2 	this: 1.41	total:2708.59	alley=485	cds=52	split=30	deadend=3	
+191 - 183/3040 46,61 val 2 	this:34.46	total:2743.05	alley=10427	cds=2821	split=1292	deadend=96	
+191 - 184/3040 29,27 val 2 	this:64.06	total:2807.12	alley=24652	cds=3560	split=2173	deadend=288	
+191 - 185/3040 51,50 val 2 	this:26.97	total:2834.09	alley=8877	cds=1734	split=1026	deadend=63	
+191 - 186/3040 21,64 val 1 	this:27.62	total:2861.70	alley=9858	cds=1008	split=667	deadend=95	
+191 - 187/3040 19,29 val 2 	this:30.71	total:2892.42	alley=11743	cds=2553	split=958	deadend=203	
+191 - 188/3040 2,63 val 1 	this:114.39	total:3006.80	alley=32894	cds=8241	split=4157	deadend=349	
+191 - 189/3040 41,8 val 1 	this: 3.21	total:3010.01	alley=1103	cds=104	split=59	deadend=4	
+191 - 190/3040 22,58 val 2 	this: 9.68	total:3019.70	alley=3305	cds=341	split=220	deadend=34	
+191 - 191/3040 5,18 val 2 	this: 3.11	total:3022.81	alley=1153	cds=104	split=81	deadend=7	
+191 - 192/3040 27,45 val 2 	this: 1.90	total:3024.71	alley=744	cds=75	split=32	deadend=9	
+191 - 193/3040 30,42 val 2 	this:79.79	total:3104.51	alley=28700	cds=5372	split=2470	deadend=273	
+191 - 194/3040 34,57 val 2 	this: 8.75	total:3113.25	alley=2637	cds=278	split=164	deadend=29	
+191 - 195/3040 56,22 val 2 	this: 2.96	total:3116.21	alley=928	cds=314	split=74	deadend=5	
+191 - 196/3040 55,38 val 1 	this:14.10	total:3130.31	alley=4569	cds=762	split=464	deadend=36	
+191 - 197/3040 20,4 val 2 	this: 6.35	total:3136.65	alley=1645	cds=522	split=113	deadend=11	
+191 - 198/3040 59,35 val 2 	this:32.52	total:3169.17	alley=11766	cds=1776	split=1072	deadend=93	
+191 - 199/3040 23,25 val 2 	this: 3.38	total:3172.55	alley=1327	cds=119	split=68	deadend=21	
+191 - 200/3040 6,51 val 2 	this: 0.40	total:3172.95	alley=15	split=3	cds=1	
+191 - 201/3040 62,44 val 1 	this: 5.34	total:3178.29	alley=1144	cds=956	split=162	deadend=11	
+191 - 202/3040 10,62 val 1 	this: 9.84	total:3188.12	alley=3297	cds=337	split=219	deadend=33	
+191 - 203/3040 67,35 val 1 	this:12.61	total:3200.73	alley=4356	cds=776	split=427	deadend=38	
+191 - 204/3040 32,15 val 2 	this: 3.60	total:3204.33	alley=976	cds=414	split=78	deadend=7	
+191 - 205/3040 13,35 val 1 	this:42.04	total:3246.37	alley=13818	cds=3067	split=1626	deadend=161	
+191 - 206/3040 35,10 val 2 	this:14.75	total:3261.13	alley=3752	cds=750	split=436	deadend=37	
+191 - 207/3040 38,53 val 2 	this: 4.61	total:3265.73	alley=1278	cds=140	split=56	deadend=18	
+191 - 208/3040 60,2 val 1 	this: 0.38	total:3266.12	split=2	alley=1	
+191 - 209/3040 63,55 val 1 	this: 2.12	total:3268.23	cds=450	alley=275	split=59	deadend=3	
+191 - 210/3040 50,40 val 2 	this: 3.49	total:3271.72	alley=1443	cds=343	split=109	deadend=5	
+191 - 211/3040 1,31 val 1 	this: 0.52	total:3272.24	alley=14	split=6	deadend=1	cds=1	
+191 - 212/3040 39,14 val 1 	this: 0.44	total:3272.68	deeptunnel=1	
+191 - 213/3040 26,1 val 1 	this: 2.55	total:3275.23	alley=582	cds=56	split=36	deadend=4	
+191 - 214/3040 48,30 val 2 	this:61.66	total:3336.89	alley=19035	cds=5210	split=1996	deadend=157	
+191 - 215/3040 29,20 val 2 	this:24.62	total:3361.51	alley=7912	cds=1128	split=674	deadend=64	
+191 - 216/3040 51,59 val 2 	this: 0.45	total:3361.96	alley=10	split=2	cds=1	
+191 - 217/3040 2,54 val 1 	this: 0.44	total:3362.40	alley=10	split=1	
+191 - 218/3040 22,61 val 2 	this:12.23	total:3374.63	alley=3299	cds=340	split=221	deadend=34	
+191 - 219/3040 47,47 val 2 	this: 1.29	total:3375.93	alley=271	cds=32	split=15	deadend=1	
+191 - 220/3040 30,45 val 2 	this:70.83	total:3446.76	alley=22985	cds=5198	split=2238	deadend=238	
+191 - 221/3040 34,48 val 2 	this: 4.23	total:3450.99	alley=1412	cds=144	split=64	deadend=19	
+191 - 222/3040 17,8 val 2 	this: 0.55	total:3451.54	alley=115	split=11	cds=10	
+191 - 223/3040 55,63 val 2 	this:30.77	total:3482.31	alley=8131	cds=2563	split=1004	deadend=66	
+191 - 224/3040 20,3 val 2 	this: 2.11	total:3484.42	alley=629	cds=61	split=39	deadend=6	
+191 - 225/3040 59,56 val 1 	this:25.48	total:3509.91	alley=6957	cds=1583	split=840	deadend=56	
+191 - 226/3040 42,16 val 1 	this: 0.38	total:3510.28	deeptunnel=1	
+191 - 227/3040 23,22 val 1 	this: 0.45	total:3510.73	deeptunnel=1	
+191 - 228/3040 6,42 val 1 	this: 0.40	total:3511.13	cds=11	alley=8	split=3	deadend=1	
+191 - 229/3040 64,45 val 2 	this:25.01	total:3536.14	alley=8085	cds=1494	split=898	deadend=65	
+191 - 230/3040 45,5 val 2 	this: 1.72	total:3537.87	alley=551	cds=52	split=28	deadend=2	
+191 - 231/3040 10,57 val 1 	this: 0.38	total:3538.25	alley=13	deadend=2	cds=2	split=1	
+191 - 232/3040 49,66 val 1 	this: 0.37	total:3538.62	deeptunnel=1	
+191 - 233/3040 32,6 val 1 	this: 1.75	total:3540.37	alley=573	cds=80	split=31	deadend=2	
+191 - 234/3040 35,51 val 2 	this:56.39	total:3596.75	alley=19639	cds=3891	split=1706	deadend=283	
+191 - 235/3040 18,41 val 2 	this:52.76	total:3649.52	alley=18128	cds=3414	split=1892	deadend=188	
+191 - 236/3040 57,2 val 2 	this: 1.42	total:3650.93	alley=453	cds=41	split=23	deadend=1	
+191 - 237/3040 38,44 val 2 	this:70.95	total:3721.88	alley=22523	cds=5241	split=2502	deadend=206	
+191 - 238/3040 65,66 val 2 	this: 7.98	total:3729.85	alley=2137	cds=645	split=192	deadend=14	
+191 - 239/3040 11,10 val 1 	this: 0.42	total:3730.27	deeptunnel=1	
+191 - 240/3040 50,35 val 2 	this:49.53	total:3779.80	alley=16887	cds=2974	split=1470	deadend=93	
+191 - 241/3040 14,5 val 2 	this: 0.40	total:3780.20	alley=9	split=5	cds=1	
+191 - 242/3040 36,18 val 2 	this: 3.62	total:3783.83	alley=933	cds=420	split=80	deadend=8	
+191 - 243/3040 1,16 val 2 	this: 0.42	total:3784.24	alley=16	split=4	cds=2	deadend=1	
+191 - 244/3040 39,7 val 1
+>Process failed to respond; forcing abrupt termination...
+>Exit code: 1
+>pythonw -u "coil10.py"
+psyco full
+newcansee value: 0
+checking alleys
+checking split
+checking emit

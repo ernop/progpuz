@@ -1,2 +1,7 @@
 field-output/*.html
 *.pyc
+*.pickle
+*table.html
+allsols
+*.rar
+polycovers
